@@ -1,4 +1,4 @@
-For starting the MCP server:
+For starting the MCP server in Linux:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -6,12 +6,14 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-, o para Windows:
+, or in Windows:
 
-```bash
+```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 $env:PATH += ";C:\Users\ferfd\.local\bin"
 ```
+
+Then, for creating the MCP server, execute:
 
 ```bash
 # Create a new directory for our project
@@ -29,8 +31,8 @@ uv add "mcp[cli]" httpx
 touch mcp.py
 ```
 
-En windows:
-```bash
+Or in windows:
+```powershell
 # Create a new directory for our project
 uv init mcp-server
 cd mcp-server
@@ -45,6 +47,8 @@ uv add mcp[cli] httpx
 # Create our server file
 new-item mcp-server.py
 ```
+
+Finally, remove boilerplate files:
 
 ```bash
 # Remove boilerplate files
